@@ -1,0 +1,177 @@
+@import url(./css/reset.css);
+
+html,
+body {
+  background-color: bisque;
+  font-family: sans-serif;
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+.todo__body {
+  padding: 80px 0px;
+}
+
+.todo-view {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.form-text {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0px 0px 20px 0px;
+}
+
+.text-title {
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+
+.text-field {
+  display: block;
+  border: thin solid #000;
+  font-size: 1em;
+  font-family: sans-serif;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+.text-field {
+  padding: 10px 10px;
+  border: thin solid #000;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+.date-title {
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+
+.date-field {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.field__date {
+  display: block;
+  border: thin solid #000;
+  font-size: 1em;
+  font-family: sans-serif;
+  padding: 10px 10px;
+  flex: 1 1 auto;
+  border-radius: 5px;
+}
+
+.field__add-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 0 10px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+/*TASKS*/
+
+.tasks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  margin-top: 40px;
+}
+
+.tasks:empty {
+  display: none;
+}
+
+.tasks .group-header {
+  color: gray;
+  margin: 10px 0;
+}
+
+.tasks.group-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tasks .task {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.tasks .task button {
+  flex: 0 0 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.3em;
+}
+
+.tasks .task .task-description {
+  flex: 1 1 auto;
+}
+
+.tasks .task .task-delete::after {
+  content: "🗑";
+}
+
+.tasks .task .task-toggle::after {
+  content: "⚪";
+}
+
+.tasks .task.completed .task-description {
+  text-decoration: line-through;
+}
+
+.tasks .task.completed .task-toggle::after {
+  content: "✅";
+}
+
+@media (max-width: 450px) {
+  .todo__body {
+    padding: 40px 0px;
+  }
+
+  .todo-view {
+    background-color: #fff;
+    padding: 10px;
+  }
+
+  .date-field {
+    flex-flow: column nowrap;
+  }
+
+  .field__date {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .field__add-btn {
+    padding: 10px 10px;
+    margin-left: 0px;
+  }
+}
