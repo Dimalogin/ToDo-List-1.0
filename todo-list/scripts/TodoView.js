@@ -5,7 +5,6 @@ export class TodoView {
   #eventListeners = {
     handleEvent: (event) => {
       if (event.currentTarget === this.#form) {
-        console.log("form");
         this.#onAddTask(event);
       } else if (event.currentTarget === this.#list) {
         const target = event.target;
